@@ -1,6 +1,5 @@
 package com.bear.atm.controller.service;
 
-import com.bear.atm.controller.domain.Account;
 import com.bear.atm.controller.model.MoneyInfo;
 
 import java.util.List;

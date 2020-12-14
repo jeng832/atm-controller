@@ -11,7 +11,6 @@ import com.bear.atm.controller.service.AtmService;
 import com.bear.atm.controller.statemachine.Events;
 import com.bear.atm.controller.statemachine.States;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Service;
 
