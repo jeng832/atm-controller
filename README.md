@@ -82,7 +82,7 @@ public interface AtmService {
     - Done the ATM job process
     - It should be operated only ACCOUNT_INFO state
 ## Unit Tests
-![Unit test](./img/unit_test.png)
+![Unit test](./img/unit_test.PNG)
 - The unit tests check validity about whole interfaces, methods and the state machine
 - It tests both normal cases and various abnormal cases
 ## Block Diagram
@@ -92,7 +92,7 @@ public interface AtmService {
 - StateMachineManager is manage about the State Machine (which is developed by Spring-statemachine)
 ## Class Diagram
 ![Class Diagram](./img/class_diagram.png)
-![Class list](./img/class_lists.png)
+![Class list](./img/class_lists.PNG)
 ## ER Diagram
 ![ER Diagram](./img/ERD.png)
 ## State Diagram
