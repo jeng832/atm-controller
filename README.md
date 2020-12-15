@@ -82,7 +82,6 @@ public interface AtmService {
     - Done the ATM job process
     - It should be operated only ACCOUNT_INFO state
 
-
 ## Block Diagram
 ## ER Diagram
 ![ER diagram](./img/ERD.png)
