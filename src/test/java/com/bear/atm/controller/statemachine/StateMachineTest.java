@@ -75,6 +75,19 @@ class StateMachineTest {
         Assertions.assertThat(stateMachine.getState().getId()).isEqualTo(States.ACCOUNT_INFO);
         stateMachine.sendEvent(Events.CANCEL);
         Assertions.assertThat(stateMachine.getState().getId()).isEqualTo(States.IDLE);
+
+        stateMachine.sendEvent(Events.INSERT_CARD);
+        stateMachine.sendEvent(Events.INVALID_PIN);
+        Assertions.assertThat(stateMachine.getState().getId()).isEqualTo(States.PIN_CHECK2);
+        stateMachine.sendEvent(Events.CANCEL);
+        Assertions.assertThat(stateMachine.getState().getId()).isEqualTo(States.IDLE);
+
+        stateMachine.sendEvent(Events.INSERT_CARD);
+        stateMachine.sendEvent(Events.INVALID_PIN);
+        stateMachine.sendEvent(Events.INVALID_PIN);
+        Assertions.assertThat(stateMachine.getState().getId()).isEqualTo(States.PIN_CHECK3);
+        stateMachine.sendEvent(Events.CANCEL);
+        Assertions.assertThat(stateMachine.getState().getId()).isEqualTo(States.IDLE);
     }
 
 }

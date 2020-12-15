@@ -81,12 +81,22 @@ public interface AtmService {
 - void **done**()
     - Done the ATM job process
     - It should be operated only ACCOUNT_INFO state
-
+## Unit Tests
+![Unit test](./img/unit_test.png)
+- The unit tests check validity about whole interfaces, methods and the state machine
+- It tests both normal cases and various abnormal cases
 ## Block Diagram
+![Block Diagram](./img/block_diagram.png)
+- AtmService(It is implemented by AtmServiceImpl) is consist of Repository Manager and StateMachineManager
+- RepositoryManager is manage about the Databases (save, get)
+- StateMachineManager is manage about the State Machine (which is developed by Spring-statemachine)
+## Class Diagram
+![Class Diagram](./img/class_diagram.png)
+![Class list](./img/class_lists.png)
 ## ER Diagram
-![ER diagram](./img/ERD.png)
-## State Machine Diagram
-
+![ER Diagram](./img/ERD.png)
+## State Diagram
+![State Diagram](./img/statemachine_diagram.png)
 ## Package architecture the project
 ```
 atm-controller
@@ -119,6 +129,7 @@ atm-controller
 ```
 
 ## Future development
-- 
-## Lessons & Learned
-- spring-statemachine
+- Integrate with Bank System
+    - Actually ATM do not need to save the Customer, Card and Account information
+    - When it is needed, (maybe...) ATM should call Bank System.
+- Security check for integrating other systems
